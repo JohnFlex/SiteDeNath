@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <header>
+        <h1> NATHALIE JOIRIS</h1>
+    </header>
+    <div class="tileDiv">
+        <p><a href="sculptures.html">SCUPLTURES</a></p>
+        <p><a href="photos.html">PHOTOGRAPHIE</a></p>
+    </div>
+</body>
+
+<script language="javascript">
+    function aff_fond() {
+        var urlString = "url('fonds/"+ (Math.floor(Math.random() * 3)+1)+".jpg')";
+        document.body.style.backgroundImage = urlString;
+    }
+
+    aff_fond();
+</script>
+
+<html>

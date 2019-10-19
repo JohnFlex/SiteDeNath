@@ -1,0 +1,46 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "e headOfPage"
+        "e titles"
+        "e2 e2"
+        "e2 e2";
+    height: 100%;
+    grid-auto-columns: 49%;
+    background-size : contain; 
+    background-repeat : no-repeat; 
+    background-position : center;
+    background-color: green;
+}
+
+.tileDiv{
+    grid-area: titles;
+    
+}
+
+header{
+    grid-area: headOfPage;
+
+}
+
+.tileDiv p, header *{
+    margin-right: 10%;
+}
+
+.tileDiv, header{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;  
+    flex-direction: column;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
