@@ -1,0 +1,70 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "im im headOfPage"
+        "im im titles"
+        "im im menus"
+        "im im menus"
+        "im im menus"
+        "im im menus";
+    height: 100%;
+    background-color: lightgray;
+    grid-auto-flow: column;
+    grid-auto-columns: 33%;
+
+    width: 100%;
+}
+
+.tileDiv,.menus,header{
+    margin-right: 10%;
+}
+
+.tileDiv{
+    grid-area: titles;
+    display: flex;
+    align-items :flex-end;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header{
+    grid-area: headOfPage;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+
+header h1{
+    text-align: right;
+}
+
+.menus{
+    grid-area: menus;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.menus p{
+    margin : 5px;
+}
+
+.mainImage{
+    max-width: 90%;
+    max-height: 90%;
+    grid-area: im;
+    justify-self: center;
+    align-self: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    text-decoration: underline;
+}

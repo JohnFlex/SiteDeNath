@@ -1,26 +1,43 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
 </head>
 
 <body>
     <header>
         <h1> NATHALIE JOIRIS</h1>
     </header>
+    <img src="./fonds/1.jpg" class="mainImage">
     <div class="tileDiv">
-        <p><a href="sculptures.html">SCUPLTURES</a></p>
-        <p><a href="photos.html">PHOTOGRAPHIE</a></p>
+        <h3>PHOTOGRAPHIE</h3>
+    </div>
+    <div class="menus">
+        <p>
+            <a href="./Sapporo.html">Sapporo</a>
+        </p>
+        <p>
+            <a href="./Houses.html">Houses</a>
+        </p>
+        <p>
+            <a href="./Taiwan.html">Taiwan</a>
+        </p>
+        <p>
+            <a href="./Light.html">Light</a>
+        </p>
     </div>
 </body>
 
 <script language="javascript">
-    function aff_fond() {
-        var urlString = "url('fonds/"+ (Math.floor(Math.random() * 3)+1)+".jpg')";
-        document.body.style.backgroundImage = urlString;
+    function GetLastPhoto(){
+        //TODO : Changer en dernière photo
+
+
     }
 
-    aff_fond();
+    
+
+    GetLastPhoto();
 </script>
 
 <html>
