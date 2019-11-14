@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="photo.css">
+</head>
+
+<body>
+
+    <img class="photo" src="1.jpg">
+    <p class="legende"> BONJOUR CECI EST UNE LEGENDE</p>
+    <div class="r"></div>
+    <div class="flh menu" ><img src="1.jpg"> </div>
+    <div class="m1 menu" ><img src="2.jpg"></div>
+    <div class="m2 menu" ><img src="3.jpg"></div>
+    <div class="m3 menu" ><img src="4.jpg"></div>
+    <div class="m4 menu" ><img src="5.jpg"></div>
+    <div class="flb menu" ><img src="1.jpg"></div>
+
+
+    <script>
+
+            function SetPhoto() {
+                console.log("Clicked");
+            }
+        
+            for (var index = 0; index < document.getElementsByClassName("menu").length; index++) {
+                const element = document.getElementsByClassName("menu")[index];
+                element.addEventListener("click", SetPhoto);
+            }
+        </script>
+        
+</body>
+
+
+</html>

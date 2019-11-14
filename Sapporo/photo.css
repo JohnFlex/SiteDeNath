@@ -1,0 +1,83 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "r p p p p"
+        "flh p p p p"
+        "m1 p p p p"
+        "m2 p p p p"
+        "m3 p p p p"
+        "m4 p p p p"
+        "flb p p p p"
+        "n l l l l";
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    grid-auto-columns: 20%;
+    background-color: lightgray;
+}
+
+body>*{
+    height: 100%;
+    width: 100%;
+}
+
+p{
+    margin: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.photo{
+    grid-area: p;
+    height: auto !important;
+    max-height: 90% !important;
+    width: auto !important;
+    max-width: 90% !important;
+    margin: auto;
+    display: block;
+}
+
+.legende{
+    grid-area: l;
+}
+
+.m1{
+    grid-area: m1;
+}
+
+.m2{
+    grid-area: m2;
+}
+
+.m3{
+    grid-area: m3;
+}
+
+.m4{
+    grid-area: m4;
+}
+
+.flh{
+    grid-area: flh;
+}
+
+.flb{
+    grid-area: flb;
+}
+
+.flb,.flh,.m1,.m2,.m3,.m4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flb img, .flh img{
+    max-width: 50%;
+    max-height: 50%;
+} 
+
+.m1 img, .m2 img, .m3 img, .m4 img{
+    max-height: 90%;
+    max-width: 90%;
+    display: block;
+}

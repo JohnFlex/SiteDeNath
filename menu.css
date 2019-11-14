@@ -13,6 +13,10 @@ body{
     grid-auto-columns: 33%;
 
     width: 100%;
+    background-size : contain; 
+    background-repeat : no-repeat; 
+    background-position : center;
+    margin: 0px;
 }
 
 .tileDiv,.menus,header{
@@ -63,8 +67,11 @@ header h1{
 a{
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 a:hover{
-    text-decoration: underline;
+    text-decoration: underline ;
+    font-weight: bold;
 }
+
