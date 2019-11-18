@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="viewphoto.css">
+</head>
+
+<body>
+
+    <img class="photo" src="1.jpg" id="mainP">
+    <p class="legende"> BONJOUR CECI EST UNE LEGENDE</p>
+    <div class="r"></div>
+    <div class="min1 menu" ><img src="1.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="2.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="3.jpg" class="aPhoto" onclick="SetPhoto(this)"></div>
+    <div class="min2 menu" ><img src="2.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="3.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="4.jpg" class="aPhoto" onclick="SetPhoto(this)"></div>
+    <div class="min3 menu" ><img src="3.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="4.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="5.jpg" class="aPhoto" onclick="SetPhoto(this)"></div>
+    <div class="min4 menu" ><img src="4.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="5.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="1.jpg" class="aPhoto" onclick="SetPhoto(this)"></div>
+    <div class="min5 menu" ><img src="5.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="1.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="1.jpg" class="aPhoto" onclick="SetPhoto(this)"></div>
+    <div class="min6 menu" ><img src="1.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="1.jpg" class="aPhoto" onclick="SetPhoto(this)"><img src="2.jpg" class="aPhoto" onclick="SetPhoto(this)"></div>
+
+
+    <script>
+
+            function SetPhoto(Ellement) {
+                document.getElementById("mainP").src = Ellement.src;
+            }
+            
+        </script>
+        
+</body>
+
+
+</html>

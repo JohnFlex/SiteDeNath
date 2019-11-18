@@ -1,46 +1,76 @@
 body{
     display: grid;
     grid-template-areas: 
-        "e headOfPage"
-        "e titles"
-        "e2 e2"
-        "e2 e2";
+        "im im headOfPage"
+        "im im titles"
+        "im im menus"
+        "im im menus"
+        "im im menus"
+        "im im menus";
     height: 100%;
-    grid-auto-columns: 49%;
+    background-color: lightgray;
+    grid-auto-flow: column;
+    grid-auto-columns: 33%;
+
+    width: 100%;
     background-size : contain; 
     background-repeat : no-repeat; 
     background-position : center;
-    background-color: green;
+    margin: 0px;
+}
+
+.tileDiv,.menus,header{
+    margin-right: 10%;
 }
 
 .tileDiv{
     grid-area: titles;
-    
+    display: flex;
+    align-items :flex-end;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header{
     grid-area: headOfPage;
-
-}
-
-.tileDiv p, header *{
-    margin-right: 10%;
-}
-
-.tileDiv, header{
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;  
     flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
 
+header h1{
+    text-align: right;
+}
+
+.menus{
+    grid-area: menus;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.menus p{
+    margin : 5px;
+}
+
+.mainImage{
+    max-width: 90%;
+    max-height: 90%;
+    grid-area: im;
+    justify-self: center;
+    align-self: center;
 }
 
 a{
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 a:hover{
-    text-decoration: underline;
+    text-decoration: underline ;
+    font-weight: bold;
 }
-

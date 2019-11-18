@@ -1,0 +1,99 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "title p p"
+        "subtitle p p"
+        "textt p p"
+        "textt p p"
+        "none p p"
+        "back none2 moreP";
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    grid-auto-columns:20% 40% 40%;
+    background-color: lightgray;
+    background-size : contain; 
+    background-repeat : no-repeat; 
+    background-position : center;
+}
+
+body>*{
+    height: 100%;
+    width: 100%;
+}
+
+.im{
+    display: block;
+    height: 10px !important;
+    max-height: 90% !important;
+    width: 10px !important;
+    max-width: 90% !important;
+    margin: auto;
+    grid-area: p;
+
+}
+
+.title{
+    grid-area: title;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.subtitle{
+    grid-area: subtitle;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    
+}
+
+.textt{
+    grid-area: textt;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.back{
+    grid-area: back;
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+.back a{
+    display: block;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+.moreP{
+    grid-area: moreP;
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+.moreP p{
+    text-align: right;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+p,h1,h3{
+    margin: 0px;
+}
+
+.title, .subtitle, .textt, .back{
+    margin-left: 10%;
+}
+
+.textt p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    white-space: nowrap;
+}
+
+a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="menu.css">
+</head>
+
+<body>
+    <header>
+        <h1> NATHALIE JOIRIS</h1>
+    </header>
+    <!--<img src="./fonds/1.jpg" class="mainImage">-->
+    <div class="tileDiv">
+        <h3>SCULPTURES</h3>
+    </div>
+    <div class="menus">
+        <p>
+            <a>Works</a>
+        </p>
+        <p>
+            <a href="./Biography/index.html">Biography</a>
+        </p>
+        <p>
+            <a>Bibliography</a>
+        </p>
+        <p>
+            <a href="./Texts/index.html">Texts</a>
+        </p>
+        <p>
+            <a href="./Contact/index.html">Contact</a>
+        </p>
+        <p>
+            <a href="https://www.twitter.com"><img src="twitter.png" style="max-height:25px;width:auto;"></a>
+        </p>
+    </div>
+</body>
+
+<script language="javascript">
+    function aff_fond() {
+        var urlString = "url('fonds/"+ (Math.floor(Math.random() * 3)+1)+".jpg')";
+        document.body.style.backgroundImage = urlString;
+    }
+
+    aff_fond();
+</script>
+
+<html>
