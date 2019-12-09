@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="gallery.css">
+    </head>
+
+    <body>
+        <img src="left.png" id="left">
+        <img src="1.jpg" id="main">
+        <img src="right.png" id="right">
+    </body>
+
+    <script>
+        var maxPhotos = 6;
+        var actualPhoto = 1;
+        document.getElementById("left").addEventListener("click",Left);
+        document.getElementById("right").addEventListener("click", Right);
+
+        function Left() {
+            actualPhoto--;
+            if (actualPhoto < 1) {
+                actualPhoto = 1;
+            }
+            UpdatePhoto();
+        }
+
+        function Right() {
+            actualPhoto++;
+            if (actualPhoto > maxPhotos) {
+                actualPhoto = maxPhotos;
+            }
+            UpdatePhoto();
+        }
+
+        function UpdatePhoto(){
+            document.getElementById("main").src = "./"+actualPhoto+".jpg";
+        }
+
+    </script>
+</html>

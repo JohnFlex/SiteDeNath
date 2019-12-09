@@ -1,0 +1,57 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "t p p"
+        "des p p"
+        "des p p"
+        "min1 p p"
+        "min2 p p";
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    grid-auto-columns: 33%;
+    background-color: lightgray;
+}
+
+body h3{
+    grid-area: t;
+}
+
+body>p{
+    grid-area: des;
+}
+
+#mins1{
+    grid-area: min1;
+}
+
+#mins2{
+    grid-area: min2;
+}
+
+#mainImage{
+    grid-area: p;
+    margin: auto;
+}
+
+img{
+    max-height: 90%;
+    width: auto;
+}
+
+#mins1 img,#mins2 img{
+    max-width: 33%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+#mins1, #mins2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body>*:not(#mainImage){
+    margin-left: 10%;
+}

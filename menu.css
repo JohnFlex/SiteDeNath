@@ -52,7 +52,7 @@ header h1{
     align-items: flex-end;
 }
 
-.menus p{
+.menus>*{
     margin : 5px;
 }
 
@@ -74,4 +74,29 @@ a:hover{
     text-decoration: underline ;
     font-weight: bold;
 }
+
+.menus>div{
+    position: relative;
+    text-align: right;
+    width: 100%;
+}
+
+.submenu{
+    width : 300px;
+    position: absolute !important;
+    left:-100px;
+    display: none;
+    top: -2px;
+}
+
+.menus div:hover .submenu{
+    display: block;
+}
+
+div{
+    font-weight: bold;
+}
+
+
+
 
