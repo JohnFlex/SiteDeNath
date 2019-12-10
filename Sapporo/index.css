@@ -83,3 +83,20 @@ p,h1,h3{
 .title, .subtitle, .textt, .back{
     margin-left: 10%;
 }
+
+.textt{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.textt a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 5px;
+}
+
+.textt a:hover{
+    text-decoration: underline;
+}
