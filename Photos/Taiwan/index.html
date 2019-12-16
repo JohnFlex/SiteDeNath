@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="../../fonts.css">
+</head>
+
+<body>
+
+    <div class="title"><h1>SAPPORO</h1></div>
+    <div class="subtitle"><h3>Ceci est mon sous-titre</h3></div>
+    <div class="textt">
+        <a onmouseover="SetPhoto(this)" href="./Architecture/previewPhotos.html">Architecture</a>
+
+    </div>
+    <!--<p class="back"><a href="../photos.html">Retour à la page d'accueil</a></p>-->
+    <a id="mainA" href="./Maisons/previewPhotos.html"><img src="./Maisons/01.jpg" class="p"></a>
+
+    
+    <script>
+        function SetPhoto(Ellement) {
+            var tempStr = Ellement.getAttribute("href").toString();
+            var newtempvar = "";
+            for (let index = 0; index < tempStr.length; index++) {
+                if (tempStr.charCodeAt(tempStr.length-index) == 47) {
+                    newtempvar = tempStr.substring(0,tempStr.length-index+1);
+                    break;
+                }
+                
+            }
+            document.getElementsByClassName("p")[0].src = newtempvar + "01.jpg";
+            document.getElementById("mainA").setAttribute("href",tempStr)
+        }
+            
+    </script>
+        
+</body>
+
+
+</html>

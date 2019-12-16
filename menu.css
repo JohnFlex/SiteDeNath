@@ -97,6 +97,12 @@ div{
     font-weight: bold;
 }
 
+h1,h3,a{
+    background-color:rgba(211, 211, 211, 0.75);
+    border-radius: 5px;
+    display: block;
+}
+
 
 
 
