@@ -1,0 +1,110 @@
+body{
+    display: grid;
+    grid-template-areas: 
+        "title p p"
+        "subtitle p p"
+        "textt p p"
+        "textt p p"
+        "none p p"
+        "none p p";
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    grid-auto-columns:20% 40% 40%;
+    background-color: lightgray;
+}
+
+body>*{
+    height: 100%;
+    width: 100%;
+}
+
+.p{
+    display: block;
+    height: auto !important;
+    max-height: 90% !important;
+    width: auto !important;
+    max-width: 90% !important;
+    margin: auto;
+
+}
+
+#mainA{
+    grid-area: p;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    grid-area: title;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.subtitle{
+    grid-area: subtitle;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    
+}
+
+.textt{
+    grid-area: textt;
+    text-align: justify;
+    
+}
+
+.back{
+    grid-area: back;
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+.back a{
+    display: block;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+.moreP{
+    grid-area: moreP;
+    display: flex;
+    flex-direction: column-reverse;
+    
+}
+
+.moreP p{
+    text-align: right;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
+p,h1,h3{
+    margin: 0px;
+}
+
+.title, .subtitle, .textt, .back{
+    margin-left: 10%;
+}
+
+.textt{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.textt a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 5px;
+}
+
+.textt a:hover{
+    text-decoration: underline;
+}
