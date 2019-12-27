@@ -19,6 +19,17 @@
 
             function SetPhoto(Ellement) {
                 document.getElementById("mainP").src = Ellement.src;
+                var tempStr = Ellement.getAttribute("href").toString();
+                var newtempvar = "";
+                for (let index = 0; index < tempStr.length; index++) {
+                    if (tempStr.charCodeAt(tempStr.length-index) == 47) {
+                        newtempvar = tempStr.substring(0,tempStr.length-index+1);
+                        break;
+                    }
+                    
+                }
+                document.getElementsByClassName("p")[0].src = newtempvar + "01.jpg";
+                document.getElementById("mainP").setAttribute("src",tempStr)
             }
             
         </script>

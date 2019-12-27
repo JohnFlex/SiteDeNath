@@ -27,7 +27,9 @@
 <script>
 
     function SetPhoto(Ellement) {
-        document.getElementById("mainP").src = Ellement.src;
+        var tempVar = Ellement.getAttribute("src").toString();
+        tempVar = tempVar.substring(1,tempVar.length);
+        document.getElementById("mainImage").src =tempVar;
     }
 
 </script>

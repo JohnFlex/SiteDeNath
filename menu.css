@@ -84,7 +84,7 @@ a:hover{
 .submenu{
     width : 300px;
     position: absolute !important;
-    left:-100px;
+    left:-50%;
     display: none;
     top: -2px;
 }
@@ -98,8 +98,6 @@ div{
 }
 
 h1,h3,a{
-    background-color:rgba(211, 211, 211, 0.75);
-    border-radius: 5px;
     display: block;
 }
 
