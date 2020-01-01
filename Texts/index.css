@@ -6,15 +6,13 @@ body{
         "textt p p"
         "textt p p"
         "none p p"
-        "back none2 moreP";
+        "back p p";
     height: 100%;
     width: 100%;
     margin: 0px;
     grid-auto-columns:20% 40% 40%;
     background-color: lightgray;
-    background-size : contain; 
-    background-repeat : no-repeat; 
-    background-position : center;
+
 }
 
 body>*{
@@ -22,15 +20,13 @@ body>*{
     width: 100%;
 }
 
-.im{
+#showText{
     display: block;
-    height: 10px !important;
     max-height: 90% !important;
-    width: 10px !important;
     max-width: 90% !important;
     margin: auto;
     grid-area: p;
-
+    overflow: auto;
 }
 
 .title{
@@ -67,19 +63,6 @@ body>*{
     margin-bottom: 1%;
 }
 
-.moreP{
-    grid-area: moreP;
-    display: flex;
-    flex-direction: column-reverse;
-    
-}
-
-.moreP p{
-    text-align: right;
-    margin-right: 1%;
-    margin-bottom: 1%;
-}
-
 p,h1,h3{
     margin: 0px;
 }
@@ -91,9 +74,10 @@ p,h1,h3{
 .textt p{
     margin-top: 1em;
     margin-bottom: 1em;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 
 a:hover{
     text-decoration: underline;
 }
+
