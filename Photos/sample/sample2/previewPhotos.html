@@ -22,7 +22,7 @@
             src="V03.jpg" onclick="SetPhoto(this)"></div>
     <div id="mins2"><img src="V04.jpg" onclick="SetPhoto(this)"><img src="V05.jpg" onclick="SetPhoto(this)"><img
             src="V06.jpg" onclick="SetPhoto(this)"></div>
-    <a href="gallery.html"><img id="mainImage" src="01.jpg"></a>
+    <a href="gallery.html" id="mainImageContainer"><img id="mainImage" src="01.jpg"></a>
 </body>
 <script>
 
@@ -31,6 +31,7 @@
         tempVar = tempVar.substring(1,tempVar.length);
         document.getElementById("mainImage").src =tempVar;
     }
+
 
 </script>
 

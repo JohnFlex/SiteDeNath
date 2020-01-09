@@ -1,36 +1,38 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="previewPhotos.css">
-        <link rel="stylesheet" type="text/css" href="../../../fonts.css">
-    </head>
 
-    <body>
-        <h1>Sapporo</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Fusce at facilisis justo. Quisque condimentum metus sit amet est mollis 
-        faucibus. Suspendisse congue consectetur ipsum, in commodo neque posuere 
-        vel. Mauris eros ante, tempor at euismod eget, bibendum a justo. 
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="previewPhotos.css">
+    <link rel="stylesheet" type="text/css" href="../../../fonts.css">
+    <!-- Ici le titre de l'onglet-->
+    <title>Eiffel - Paris</title>
+
+</head>
+
+<body>
+    <!-- Le titre juste en dessous -->
+    <h1>Sapporo</h1>
+    <!-- La description juste en dessous -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Fusce at facilisis justo. Quisque condimentum metus sit amet est mollis
+        faucibus. Suspendisse congue consectetur ipsum, in commodo neque posuere
+        vel. Mauris eros ante, tempor at euismod eget, bibendum a justo.
         Nam efficitur nisl at interdum ultricies. Nunc fringilla purus massa, vel.</p>
-        <div id="mins1"><img src="V01.jpg" onclick="SetPhoto(this)"><img src="V02.jpg" onclick="SetPhoto(this)"><img src="V03.jpg" onclick="SetPhoto(this)"></div>
-        <div id="mins2"><img src="V04.jpg" onclick="SetPhoto(this)"><img src="V05.jpg" onclick="SetPhoto(this)"><img src="V06.jpg" onclick="SetPhoto(this)"></div>
-        <a href="gallery.html"><img id="mainImage" src="01.jpg"></a>
-    </body>
-    <script>
+    <div id="mins1"><img src="V01.jpg" onclick="SetPhoto(this)"><img src="V02.jpg" onclick="SetPhoto(this)"><img
+            src="V03.jpg" onclick="SetPhoto(this)"></div>
+    <div id="mins2"><img src="V04.jpg" onclick="SetPhoto(this)"><img src="V05.jpg" onclick="SetPhoto(this)"><img
+            src="V06.jpg" onclick="SetPhoto(this)"></div>
+    <a href="gallery.html" id="mainImageContainer"><img id="mainImage" src="01.jpg"></a>
+</body>
+<script>
 
-            function SetPhoto(Ellement) {
-                document.getElementById("mainP").src = Ellement.src;
-                var tempStr = Ellement.getAttribute("href").toString();
-                var newtempvar = "";
-                for (let index = 0; index < tempStr.length; index++) {
-                    if (tempStr.charCodeAt(tempStr.length-index) == 47) {
-                        newtempvar = tempStr.substring(0,tempStr.length-index+1);
-                        break;
-                    }
-                    
-                }
-                document.getElementsByClassName("p")[0].src = newtempvar + "01.jpg";
-                document.getElementById("mainP").setAttribute("src",tempStr)
-            }
-            
-        </script>
+    function SetPhoto(Ellement) {
+        var tempVar = Ellement.getAttribute("src").toString();
+        tempVar = tempVar.substring(1,tempVar.length);
+        document.getElementById("mainImage").src =tempVar;
+    }
+
+
+</script>
+
 </html>

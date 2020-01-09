@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="../../fonts.css">
+    <!-- Ici le titre à afficher dans l'onglet-->
+    <title>Paris</title>
+</head>
+
+<body>
+    <!-- Ici le titre de la rubrique -->
+    <div class="title"><h1>Paris</h1></div>
+    <!-- Ici le sous-titre de la rubrique-->
+    <div class="subtitle"><h3>Ceci est mon sous-titre</h3></div>
+
+    <div class="textt">
+        <!-- Ici les différents liens vers les sous-rubriques -->
+        <a onmouseover="SetPhoto(this)" href="./sample2/previewPhotos.html">Eiffel</a>
+    </div>
+
+    <a id="mainA" href="./sample2/previewPhotos.html"><img src="./sample2/01.jpg" class="p"></a>
+
+    
+    <script>
+        function SetPhoto(Ellement) {
+            var tempStr = Ellement.getAttribute("href").toString();
+            var newtempvar = "";
+            for (let index = 0; index < tempStr.length; index++) {
+                if (tempStr.charCodeAt(tempStr.length-index) == 47) {
+                    newtempvar = tempStr.substring(0,tempStr.length-index+1);
+                    break;
+                }
+                
+            }
+            document.getElementsByClassName("p")[0].src = newtempvar + "01.jpg";
+            document.getElementById("mainA").setAttribute("href",tempStr)
+        }
+            
+    </script>
+        
+</body>
+
+
+</html>

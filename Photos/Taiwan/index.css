@@ -10,9 +10,13 @@ body{
     height: 100%;
     width: 100%;
     margin: 0px;
+    grid-auto-flow: column;
+    grid-auto-rows: minmax(12%, auto);
     grid-auto-columns:20% 40% 40%;
     background-color: lightgray;
 }
+
+
 
 body>*{
     height: 100%;
@@ -36,6 +40,13 @@ body>*{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#mainA img{
+    max-width: 90%;
+    width: auto;
+    max-height: 90%;
+    height: auto;
 }
 
 .title{

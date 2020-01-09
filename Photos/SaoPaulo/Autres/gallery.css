@@ -2,7 +2,7 @@ img{
     display: block;
     max-height: 90%;
     width: auto;
-    
+    margin: auto;
 }
 
 body{
@@ -15,4 +15,10 @@ body{
     gap: 5px;
     justify-content: space-between;
     background-color: lightgray;
+}
+
+@-moz-document url-prefix() {
+    body {
+        grid-template-columns: 10% 80% 10% !important;
+    }
 }

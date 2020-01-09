@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="../../fonts.css">
+</head>
+
+<body>
+
+    <div class="title"><h1>JAPAN</h1></div>
+    <div class="subtitle"><h3>Histoires de rencontres</h3></div>
+    <div class="textt">
+        <a onmouseover="SetPhoto(this)" href="./House stories/previewPhotos.html">House stories</a>
+        <a onmouseover="SetPhoto(this)" href="./Worlds/previewPhotos.html">Worlds</a>
+        <a onmouseover="SetPhoto(this)" href="./Clouds/previewPhotos.html">Clouds</a>
+        <a onmouseover="SetPhoto(this)" href="./Crows/previewPhotos.html">Crows</a>
+        <a onmouseover="SetPhoto(this)" href="./Views/previewPhotos.html">Views</a>
+    </div>
+    <!--<p class="back"><a href="../photos.html">Retour à la page d'accueil</a></p>-->
+    <a id="mainA" href="./House stories/previewPhotos.html"><img src="./House stories/01.jpg" class="p"></a>
+
+    
+    <script>
+        function SetPhoto(Ellement) {
+            var tempStr = Ellement.getAttribute("href").toString();
+            var newtempvar = "";
+            for (let index = 0; index < tempStr.length; index++) {
+                if (tempStr.charCodeAt(tempStr.length-index) == 47) {
+                    newtempvar = tempStr.substring(0,tempStr.length-index+1);
+                    break;
+                }
+                
+            }
+            document.getElementsByClassName("p")[0].src = newtempvar + "01.jpg";
+            document.getElementById("mainA").setAttribute("href",tempStr)
+        }
+            
+    </script>
+        
+</body>
+
+
+</html>

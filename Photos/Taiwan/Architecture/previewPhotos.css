@@ -14,6 +14,12 @@ body{
     background-color: lightgray;
 }
 
+@-moz-document url-prefix() {
+    h1 {
+        padding-top: 30px;
+    }
+}
+
 body h3{
     grid-area: t;
 }
@@ -33,6 +39,10 @@ body>p{
 #mainImage{
 
     margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
 }
 
 body>a{
@@ -62,6 +72,6 @@ img{
     align-items: center;
 }
 
-body>*:not(#mainImage){
+body>*:not(#mainImageContainer){
     margin-left: 10%;
 }
